@@ -1,0 +1,260 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="ad.size" content="width=300,height=600">
+<meta name="viewport" content="width=device-width">
+<title>300x600</title>
+<script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_2.0.1_min.js"></script> <!--  check for DoubleCLick cdn updates  -->
+<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+<script src="Workday_Forward_CFO_300x600.js"></script>
+<script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+	canvas = document.getElementById("canvas");
+	anim_container = document.getElementById("animation_container");
+	dom_overlay_container = document.getElementById("dom_overlay_container");
+	var comp=AdobeAn.getComposition("3E66732EBE0642E5A2C4EA636B2C1257");
+	var lib=comp.getLibrary();
+	handleComplete({},comp);
+}
+function handleComplete(evt,comp) {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var lib=comp.getLibrary();
+	var ss=comp.getSpriteSheet();
+	exportRoot = new lib.Workday_Forward_CFO_300x600();
+	stage = new lib.Stage(canvas);	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		stage.addChild(exportRoot);
+		createjs.Ticker.framerate = lib.properties.fps;
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    
+	//Code to support hidpi screens and responsive scaling.
+	AdobeAn.makeResponsive(false,'both',false,1,[canvas,anim_container,dom_overlay_container]);	
+	AdobeAn.compositionLoaded(lib.properties.id);
+	fnStartAnimation();
+}
+</script>
+<script>
+	var clickTag="http://www.google.com";
+</script>
+<!-- <link rel="stylesheet" href="https://use.typekit.net/mvm3gbp.css"> -->
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap');
+
+body, html{margin:0; padding:0;}
+#wrapper{width:300px; height:600px; overflow:hidden; background:#ffc629; position:relative;}
+#clickArea{display:block; width:298px; height:598px; border:1px solid #cccccc; z-index:1000; cursor:pointer; position:absolute;}
+#content{position:relative; top:0; left:0; width:300px; height:600px; font-family: "Lato", sans-serif; font-size: 16px; font-weight: 900; font-variant-ligatures: no-common-ligatures;}
+.sprite{position: absolute;}
+
+/*----vvvexported from spritesheet generatorvvv----*/
+
+/*----^^^exported from spritesheet generator^^^----*/
+
+/*--separate styles for positioning your elements--*/
+#content * {position: absolute;}
+
+#lottie {
+    width: 200px;
+    height: 100%;
+    left: 12px;
+    bottom: -53px;
+}
+
+.cloud {
+    width: 300px;
+    height: 600px;
+    left: 0px;
+    top: 0px;
+}
+
+.logo {
+    width: 300px;
+    height: 600px;
+    left: 0px;
+    top: 0px;
+	z-index: 1;
+}
+
+.txt-container {
+    font-size: 0.6em;
+    top: 15px;
+    left: 21px;
+    width: 100%;
+    height: 130px;
+}
+
+.txt1, .txt2, .txt3, .txt4, .txt1b, .txt4b , .txt7a, .txt7b {
+    position: relative !important;
+    font-size: 31px;
+    
+	color: rgba(225, 75, 0, 1);
+	height: 26px;
+
+	}
+.txt1, .txt2, .txt3 {
+    letter-spacing: -0.3px; 
+}
+.txt4 {
+    letter-spacing: -0.5px; 
+}
+.red{color: red}
+.white {color: white}
+.txt7a, .txt7b {
+	position: absolute !important;
+    font-family: "Lato";
+	font-weight: normal;
+	font-size: 20px;
+	letter-spacing: 0.2px; 
+	top: 0;
+	left: 1px;
+	opacity: 0;
+}
+.txt7a{
+	letter-spacing: 0.2px; 
+}
+.txt7b {
+	letter-spacing: 0.4px; 
+}
+.cta {
+    width: 300px;
+    height: 600px;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+}
+
+.shimmer {
+	background: linear-gradient(90deg, rgba(255,255,255,0) 30%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 70%); 	
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	top: -18px;
+	left: -150px;
+    transform: rotate(20deg);
+}
+
+.yellow {
+	/* background: #ffc629; */
+	width: 100%;
+	height: 50px;
+	overflow: hidden;
+	/* border: red 1px solid; */
+}
+
+sup {
+    font-size: 52%;
+    margin: 2px 0px 0px -2px;
+}
+img {
+	width: 300px;
+	height: 600px;
+}
+</style>
+</head>
+<body onload="init();">
+<div id="wrapper">
+	<a href="javascript:void(window.open(window.clickTag, '_blank'))" id="clickArea"></a>
+	<div id="content">
+		<!--html elements/sprites go here-->
+	
+		<div class="txt-container">	
+
+
+			<div class="yellow" style="top: 0">
+				<div class="txt1 white">
+					For a <span class="txt1b">finance</span>
+				</div>
+			</div>
+
+			<div class="yellow" style="top: 33px">
+				<div class="txt2">decisions that</div>
+			</div>
+			<div class="yellow" style="top: 68px">
+				<div class="txt3 ">move you</div>
+			</div>
+			<div class="yellow" style="top: 102px;">
+					<div class="txt4">forward  <span class="txt4b white">world.</span></div>
+			</div>
+			<div class="yellow" style="top: 151px;">
+				<div class="txt7a">Workday.</div>
+			</div>
+			<div class="yellow" style="top: 175px;">
+				<div class="txt7b">For a changing world.<sup>™</sup></div>
+			</div>
+				
+		</div>
+		
+		<div class="cta">
+			<img src="images/cta.png"/>
+		</div>	
+
+		<div class="logo">
+			<img src="images/logo.png"/>
+		</div>	
+		<div class="cloud">
+			<img src="images/cloud.png"/>
+		</div>
+			
+
+<div id="animation_container" style="background-color:rgba(255, 255, 255, 0); width:300px; height:600px">
+		<canvas id="canvas" width="300" height="600" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 0);"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:300px; height:600px; position: absolute; left: 0px; top: 0px; display: block;">
+		</div>
+	</div>
+
+
+<script>
+
+/* TimelineLite */////////////////////////////////
+CSSPlugin.defaultTransformPerspective = 300;
+
+var wrapper = document.querySelector('#wrapper');
+var t1=new TimelineLite();
+
+	function play(){
+		//animate banner
+		t1
+			.set(['.cta','.txt1','.txt2','.txt3', '.txt4','.txt1b', '.txt4b', '.txt7a', '.txt7b'], {autoAlpha: 1})
+
+			//.set(['.txt1b'], {top: 100})
+
+			.from('.logo', .5, {y: 75, transformOrigin:'50% 100%', ease: Power1.easeOut}, "+=.5")
+			.from('#animation_container', 1, {x:-500, ease: Power1.easeInOut}, "-=.5")
+			.from('#animation_container', 1, {scale: 1.5, transformOrigin:'50% 90%', ease: Power1.easeInOut}, "-=.25")			
+			.from(['.txt1'], .5, {y: 50, ease: Power1.easeOut}, "+=.3")
+			.from(['.txt1b','.txt2','.txt3' ,'.txt4'], .5, {top: 50, ease: Power1.easeOut}, "+=.75")
+			.from('.txt4b', .5, {top: 50, ease: Power1.easeOut}, "+=1.0")
+			.from(['.txt7a', '.txt7b'], .5, {y: 50, ease: Power1.easeOut}, "+=0.45")
+			.from('.cta', .5, {y: 100, opacity: 0, ease: Power1.easeOut}, "+=.5")
+			// .add(shimmer)
+			.add(ctaBounce, "+=.25")
+			// .pause(5)
+		;
+		console.log("length: "+t1.duration());
+	};
+
+	function ctaBounce() {
+		if(!t1.isActive()) {
+			new TimelineLite().to('.cta', .25, {y:"-=10", yoyo: true, repeat: 2})
+			.to('.cta', .25, {y:0, ease: Power1.easeIn});
+		}
+	}
+
+	function shimmer() {
+		new TimelineLite().fromTo('.shimmer', .5, {x:0},{x:350});
+		// console.log('shimmer');
+	}
+
+	// wrapper.addEventListener('mouseover', shimmer);
+	wrapper.addEventListener('mouseover', ctaBounce);
+
+	play();
+
+
+</script>
+</body>
+</html>

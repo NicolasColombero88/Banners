@@ -1,0 +1,294 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body, body * {
+  border: 0 none;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transform: translateZ(0.00001);
+  transform: translateZ(0.00001);
+}
+body{
+    width: 300px;
+    height: 250px;
+}
+:focus {
+  outline: none;
+}
+::-moz-focus-inner {
+  border: 0;
+}
+
+/* CONTENT */
+
+#banner {
+    width: 300px;
+    height: 250px;
+    position: relative;
+    visibility: hidden;
+}
+
+#stage {
+    width: 300px;
+    height: 250px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    cursor: pointer;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 5;
+}
+
+#stage #bg1 {
+    background: url(bg_600x500.jpg) 0px 0px / 300px 250px no-repeat;
+    width: 300px;
+    height: 250px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+
+#stage #footerlogo1 {
+  height: 250px;
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  width: 300px;
+  z-index: 99;
+}
+#stage #footerlogo1 img {
+  height: 100%;
+  width: 100%;
+}
+#stage #footerlogo2 {
+  height: 58px;
+  right: 0;
+  position: absolute;
+  opacity: 0;
+  bottom: 0;
+  width: 104px;
+  z-index: 20;
+}
+#stage #footerlogo2 img {
+  height: 100%;
+  width: 100%;
+ 
+}
+
+.copy {
+    color: #ffffff;
+    font: 700 14px/14px Arial, Helvetica, sans-serif;
+    letter-spacing: 0px;
+    position: absolute;
+}
+
+.color1 {
+    background-color: #188ccc;
+
+}
+
+.color2 {
+    background-color: #004986;
+
+}
+
+.top {
+    top:125px;
+}
+
+.bottom{
+     top:159px;
+} 
+
+.box {
+    padding: 10px 10px;
+    opacity: 1;
+}
+
+
+/* END-FRAME */
+
+
+#stage #Endframe #bg2 {
+    width: 300px;
+    height: 250px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+#stage #Endframe #bg2Sub {
+    width: 300px;
+    height: 69px;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 48px;
+    left: 0;
+    z-index: 2;
+}
+
+#stage #Endframe .titles {
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    position: absolute;
+    text-transform: uppercase;
+} 
+
+#stage #Endframe #Head {
+    width: 300px;
+    height: 100px;
+    font-size: 19px;
+    line-height: 21px;
+    position: absolute;
+    top: 26px;
+    left: -300px;
+}
+
+#stage #Endframe #subHead {
+    width: 300px;
+    height: 37px;
+    font-size: 14px;
+    line-height: 16px;
+    position: absolute;
+    bottom: 63px;
+    left: -300px;
+    z-index: 2; 
+}
+
+
+/* FOOTER */
+
+
+#stage #footer {
+    width: 300px;
+    height: 50px;
+    overflow: hidden;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 2;
+}
+
+#stage #logo {
+      top: 90px;
+      left: 76px;
+      position: absolute;
+      width: 159px;
+      height: 70px;
+      z-index: 11;
+}
+
+#stage #logo img {
+    height: 100%;
+    width: 100%;
+}
+
+#legal #open {
+    width: 74px;
+    height: 16px;
+    box-sizing: border-box;
+    border: 1px solid #aeafb3;
+    background-color: #ffffff;
+    font: 500 6.5pt/15px Arial, Helvetica, sans-serif;
+    color: #58595b;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    top: 184px;
+    right: 10px;
+    opacity: 1;
+    display: none;
+    cursor: pointer;
+    z-index: 11;
+}
+
+#legal #disclosure {
+    width: 263px;
+    height: 173px;
+    border: 1px solid #cdcccc;
+    background-color: #ffffff;
+    padding: 8px 7px 6px 8px;
+    position: absolute;
+    bottom: 50px;
+    left: 10px;
+    display: none;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    z-index: 11;
+}
+
+#legal #disclosure p {
+    font: 400 7pt/10pt Arial, Helvetica, sans-serif;
+    color: #000100;
+    margin: 0px 6px 10px 2px;
+    padding: 0px;
+    
+}
+
+#legal #close {
+    width: 6px;
+    height: 6px;
+    background: transparent url(button_close_12x12.png) 0px 0px / 6px 6px no-repeat;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: none;
+    z-index: 11;
+}
+
+#cta {
+    width: 129px;
+    height: 36px;
+    overflow: hidden;
+    border-radius: 3px;
+    background-color: #39B54A;
+    font: 700 12px/37px Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 7px;
+    left: 10px;
+    transform: scale(0.1);
+    opacity: 0;
+    display: none;
+    z-index: 9999;
+}
+
+#cta:hover {
+  background-color: #007A3E;
+}
+
+#glitter {
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjAiLz4KICAgIDxzdG9wIG9mZnNldD0iMzklIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNjQlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(39%,rgba(255,255,255,1)), color-stop(64%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 39%,rgba(255,255,255,1) 64%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */
+    background: -webkit-linear-gradient(315deg,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 39%,rgba(255,255,255,1) 64%,rgba(255,255,255,0) 100%);
+    background: linear-gradient(135deg,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 39%,rgba(255,255,255,1) 64%,rgba(255,255,255,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+    width: 130px;
+    height: 36px;
+    position: absolute;
+    top: 0;
+    left: -158px;
+    z-index: 601;
+}
+
+
+
+
+
+

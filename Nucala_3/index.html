@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<!--
+	NOTES:
+	1. All tokens are represented by '$' sign in the template.
+	2. You can write your code only wherever mentioned.
+	3. All occurrences of existing tokens will be replaced by their appropriate values.
+	4. Blank lines will be removed automatically.
+	5. Remove unnecessary comments before creating your template.
+-->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="authoring-tool" content="Adobe_Animate_CC">
+    <title>1010719R0_SEA_Conversion_300x250</title>
+    <!-- write your code here -->
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="ad.size" content="width=300,height=250">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="assets/footer.css">
+    <!--  <link rel="stylesheet" href="https://use.typekit.net/anq5uzw.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700,700i,800" rel="stylesheet">
+
+    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="assets/jquery.tinyscrollbar.js"></script>
+
+    <script src="assets/script.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+                $('#footer').tinyscrollbar({
+                    trackSize: 54
+                });
+
+            } else if (navigator.userAgent.indexOf("Chrome") !== -1) {
+                $('#footer').tinyscrollbar({
+                    trackSize: 54
+                });
+
+            } else if (navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
+                $('#footer').tinyscrollbar({
+                    trackSize: 54
+                });
+
+
+            } else {
+                $('#footer').tinyscrollbar({
+                    trackSize: 54
+                });
+            };
+        });
+
+    </script>
+
+
+    <script>
+        var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+
+        function init() {
+            canvas = document.getElementById("canvas");
+            anim_container = document.getElementById("animation_container");
+            dom_overlay_container = document.getElementById("dom_overlay_container");
+            var comp = AdobeAn.getComposition("2CFF06830BC64141BE1DF1B6E29CFAB8");
+            var lib = comp.getLibrary();
+            var loader = new createjs.LoadQueue(false);
+            loader.addEventListener("fileload", function(evt) {
+                handleFileLoad(evt, comp)
+            });
+            loader.addEventListener("complete", function(evt) {
+                handleComplete(evt, comp)
+            });
+            var lib = comp.getLibrary();
+            loader.loadManifest(lib.properties.manifest);
+        }
+
+        function handleFileLoad(evt, comp) {
+            var images = comp.getImages();
+            if (evt && (evt.item.type == "image")) {
+                images[evt.item.id] = evt.result;
+            }
+        }
+
+        function handleComplete(evt, comp) {
+            //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+            var lib = comp.getLibrary();
+            var ss = comp.getSpriteSheet();
+            var queue = evt.target;
+            var ssMetadata = lib.ssMetadata;
+            for (i = 0; i < ssMetadata.length; i++) {
+                ss[ssMetadata[i].name] = new createjs.SpriteSheet({
+                    "images": [queue.getResult(ssMetadata[i].name)],
+                    "frames": ssMetadata[i].frames
+                })
+            }
+            exportRoot = new lib._1010719R0_SEA_Conversion_300x250();
+            stage = new lib.Stage(canvas);
+            //Registers the "tick" event listener.
+            fnStartAnimation = function() {
+                stage.addChild(exportRoot);
+                createjs.Ticker.setFPS(lib.properties.fps);
+                createjs.Ticker.addEventListener("tick", stage);
+            }
+            //Code to support hidpi screens and responsive scaling.
+            function makeResponsive(isResp, respDim, isScale, scaleType) {
+                var lastW, lastH, lastS = 1;
+                window.addEventListener('resize', resizeCanvas);
+                resizeCanvas();
+
+                function resizeCanvas() {
+                    var w = lib.properties.width,
+                        h = lib.properties.height;
+                    var iw = window.innerWidth,
+                        ih = window.innerHeight;
+                    var pRatio = window.devicePixelRatio || 1,
+                        xRatio = iw / w,
+                        yRatio = ih / h,
+                        sRatio = 1;
+                    if (isResp) {
+                        if ((respDim == 'width' && lastW == iw) || (respDim == 'height' && lastH == ih)) {
+                            sRatio = lastS;
+                        } else if (!isScale) {
+                            if (iw < w || ih < h)
+                                sRatio = Math.min(xRatio, yRatio);
+                        } else if (scaleType == 1) {
+                            sRatio = Math.min(xRatio, yRatio);
+                        } else if (scaleType == 2) {
+                            sRatio = Math.max(xRatio, yRatio);
+                        }
+                    }
+                    canvas.width = w * pRatio * sRatio;
+                    canvas.height = h * pRatio * sRatio;
+                    canvas.style.width = dom_overlay_container.style.width = anim_container.style.width = w * sRatio + 'px';
+                    canvas.style.height = anim_container.style.height = dom_overlay_container.style.height = h * sRatio + 'px';
+                    stage.scaleX = pRatio * sRatio;
+                    stage.scaleY = pRatio * sRatio;
+                    lastW = iw;
+                    lastH = ih;
+                    lastS = sRatio;
+                    stage.tickOnUpdate = false;
+                    stage.update();
+                    stage.tickOnUpdate = true;
+                }
+            }
+            makeResponsive(false, 'both', false, 1);
+            AdobeAn.compositionLoaded(lib.properties.id);
+            fnStartAnimation();
+            doAnimation()
+        }
+
+    </script>
+    <!-- write your code here -->
+
+    <script type="text/javascript">
+        var clickTag = "https://gsksource.com/pharma/content/gsk/source/us/en/brands/nucala/sea/the-nucala-patient.html#content-calculator";
+        var clickTag1 = "https://www.mothertobaby.org/asthma";
+        var clickTag2 = "https://www.gsksource.com/pharma/content/dam/GlaxoSmithKline/US/en/Prescribing_Information/Nucala/pdf/NUCALA-PI-PIL.PDF";
+        var clickTag3 = "https://www.gsksource.com/pharma/content/dam/GlaxoSmithKline/US/en/Prescribing_Information/Nucala/pdf/NUCALA-PI-PIL.PDF#nameddest=PIL";
+        var clickTag4 = "https://www.fda.gov/medwatch";
+        var clickTag5 = "https://www.gsksource.com/pharma/content/dam/GlaxoSmithKline/US/en/Prescribing_Information/Nucala/pdf/NUCALA-PI-PIL.PDF";
+        var clickTag6 = "https://www.gsksource.com/pharma/content/dam/GlaxoSmithKline/US/en/Prescribing_Information/Nucala/pdf/NUCALA-PI-PIL.PDF#nameddest=PIL";
+
+    </script>
+
+</head>
+
+<body onload="init();" style="margin:0px;">
+    <div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:300px; height:250px; position: absolute;overflow: hidden;">
+
+        <div id="footer" class="op first">
+
+            <div class="scrollbar">
+                <div class="track">
+                    <div class="thumb">
+                        <div class="end"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="viewport">
+                <div class="overview">
+                    <strong><span class="titleIsi">IMPORTANT SAFETY INFORMATION</strong></span>
+                    <span id="scrollHere"><img src="assets/scroll-here.svg" /></span><br />
+                    <p><strong><span class="subtitleIsi">CONTRAINDICATIONS</span></strong></p>
+                    <p>NUCALA should not be administered to patients with a history of hypersensitivity to mepolizumab or excipients in the formulation.</p>
+                    <p><strong>WARNINGS AND PRECAUTIONS</strong></p>
+                    <p><strong>Hypersensitivity Reactions</strong></p>
+                    <p>Hypersensitivity reactions (eg, anaphylaxis, angioedema, bronchospasm, hypotension, urticaria, rash) have occurred with NUCALA. These reactions generally occur within hours of administration but can have a delayed onset (ie, days). If a hypersensitivity reaction occurs, discontinue NUCALA.</p>
+                    <p><strong>Acute Asthma Symptoms or Deteriorating Disease</strong></p>
+                    <p>NUCALA should not be used to treat acute asthma symptoms, acute exacerbations, or acute bronchospasm.</p>
+                    <p><strong>Opportunistic Infections: Herpes Zoster</strong></p>
+                    <p>In controlled clinical trials, 2 serious adverse reactions of herpes zoster occurred with NUCALA compared to none with placebo. Consider vaccination if medically appropriate.</p>
+                    <p><strong>Reduction of Corticosteroid Dosage</strong></p>
+                    <p>Do not discontinue systemic or inhaled corticosteroids abruptly upon initiation of therapy with NUCALA. Decreases in corticosteroid doses, if appropriate, should be gradual and under the direct supervision of a physician. Reduction in corticosteroid dose may be associated with systemic withdrawal symptoms and/or unmask conditions previously suppressed by systemic corticosteroid therapy.</p>
+                    <p><strong>Parasitic (Helminth) Infection</strong></p>
+                    <p>Treat patients with pre-existing helminth infections before initiating therapy with NUCALA. If patients become infected while receiving NUCALA and do not respond to anti-helminth treatment, discontinue NUCALA until infection resolves.</p>
+                    <p><strong>ADVERSE REACTIONS</strong></p>
+                    <p>The most common adverse reactions (≥3% and more common than placebo) reported in the first 24 weeks of 2 clinical trials with NUCALA (and placebo) were: headache, 19% (18%); injection site reaction, 8% (3%); back pain, 5% (4%); fatigue, 5% (4%); influenza, 3% (2%); urinary tract infection, 3% (2%); abdominal pain upper, 3% (2%); pruritus, 3% (2%); eczema, 3% (&#60;1%); and muscle spasms, 3% (&#60;1%).</p>
+                    <p>Systemic Reactions, including Hypersensitivity Reactions: In 3 clinical trials, the percentages of subjects who experienced systemic (allergic and nonallergic) reactions were 3% for NUCALA and 5% for placebo. Manifestations included rash, flushing, pruritus, headache, and myalgia. A majority of the systemic reactions were experienced on the day of dosing.</p>
+                    <p>Injection site reactions (eg, pain, erythema, swelling, itching, burning sensation) occurred in subjects treated with NUCALA.</p>
+                    <p><strong>USE IN SPECIFIC POPULATIONS</strong></p>
+                    <p>A pregnancy exposure registry monitors pregnancy outcomes in women exposed to NUCALA during pregnancy. To enroll call<br>
+                        1-877-311-8972 or visit <a href="javascript:window.open(window.clickTag1); void(0)" style="text-decoration:undeline; color:#000;">www.mothertobaby.org/asthma</a>.</p>
+                    <p>The data on pregnancy exposures are insufficient to inform on drug-associated risk. Monoclonal antibodies, such as mepolizumab, are transported across the placenta in a linear fashion as the pregnancy progresses; therefore, potential effects on a fetus are likely to be greater during the second and third trimesters.</p>
+
+                    <strong>Please see full <a href="javascript:window.open(window.clickTag2); void(0)" style="text-decoration:undeline; color:#000;">Prescribing Information</a>, including <a href="javascript:window.open(window.clickTag3); void(0)" style="text-decoration:undeline; color:#000;">Patient Information</a>, for NUCALA.</strong>
+
+                    <br>
+                    <br>
+                    <strong>To report SUSPECTED ADVERSE REACTIONS, contact GlaxoSmithKline at <span class="noWrap">1-888-825-5249</span> or FDA at <span class="noWrap">1-800-FDA-1088</span> or <a href="javascript:window.open(window.clickTag4); void(0)" style="text-decoration:undeline; color:#000;">www.fda.gov/medwatch</a>.</strong>
+                    <br>
+                    <br>
+                    <br>
+                    Trademarks owned or licensed by GSK.
+                    <br>
+                    <br>
+                    &copy;2018 GSK or licensor.<br>
+                    1010719R0 November 2018
+                </div>
+            </div>
+
+            <div class="first" id="button">
+                <a href="javascript:window.open(window.clickTag5); void(0)">
+                    <div id="button-l">PRESCRIBING INFO</div>
+                </a>
+                <a href="javascript:window.open(window.clickTag6); void(0)">
+                    <div id="button-r">PATIENT INFO</div>
+                </a>
+            </div>
+
+        </div>
+        <a href="javascript:window.open(window.clickTag); void(0)">
+            <canvas id="canvas" width="300" height="250" style="position: absolute; background-color:rgba(255, 255, 255, 1.00);"></canvas></a>
+        <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:300px; height:250px; position: absolute; left: 0px; top: 0px; display: block;">
+
+            <div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 1px; z-index: 9000; background-color: #000000;"></div>
+            <div style="position: absolute; right: 0px; top: 0px; width: 1px; height: 100%; z-index: 9000; background-color: #000000;"></div>
+            <div style="position: absolute; left: 0px; bottom: 0px; width: 100%; height: 1px; z-index: 9000; background-color: #000000;"></div>
+            <div style="position: absolute; left: 0px; top: 0px; width: 1px; height: 100%; z-index: 9000; background-color: #000000;"></div>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <script src="assets/timeline.js"></script>
+
+</body>
+
+</html>

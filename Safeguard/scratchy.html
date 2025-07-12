@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <script src="Enabler.js"></script>
+    <style>
+      @import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap);
+
+      * {
+        /* avoid selection while scratching */
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      body {
+background-image:url("bg.jpg");        margin: 0px;
+        padding: 0px;
+        width: 300px;
+        height: 250px;
+        position: relative;
+        background-repeat: no-repeat;
+        
+      }
+
+      #myScratchyZone {
+        position: absolute;
+        top: 128px;
+        left: 14px;
+        cursor:url(cursor.png)24 22, auto !important;
+		
+      }
+	  
+	  canvas {
+        cursor:url(cursor.png) 24 22, auto !important;
+      }
+
+      #CTA {
+        visibility: hidden;
+        position: absolute;
+        font-family: "Open Sans", sans-serif;
+        font-size: 15pt;
+        color: #333;
+        top: 22px;
+        left: 23px;
+        width: 168px;
+        height: 75px;
+        padding: 3px 62px 3px 0;
+        cursor: pointer;
+      }
+
+      #resetBtn {
+        position: absolute;
+        z-index: 500;
+        background-color: #339933;
+        color: #FFF;
+        border: none;
+        padding: 0 1px;
+        top: 5px;
+        left: 10px;
+        cursor: pointer;
+        visibility: hidden;
+      }
+      #resetBtn:hover #resetImg {
+        -ms-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+
+      #resetImg {
+        border: none;
+        -webkit-transition: all 500ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+        -moz-transition: all 500ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+        -o-transition: all 500ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+        transition: all 500ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+      }
+
+      #log {
+        position: absolute;
+        z-index: 499;
+        top: 0;
+        left: 0;
+        overflow: auto;
+        width: 100%;
+        height: 128px;
+        border: 1px dashed black;
+        font-size: 8pt;
+        font-family: sans-serif;
+        background: #F1F1F1;
+        color: black;
+      }
+      pre {
+        margin: 0.5em 0;
+      }
+
+      :focus {outline:none;}
+      ::-moz-focus-inner {border:0;}
+
+    </style>
+
+    <meta data-template-name="TechLab_ScratchySurface">
+  </head>
+  <body>
+    <!-- <div id="log"></div> -->
+    <button id="resetBtn" onclick="scratchy.reset()" title="Reset"><img src="reset.png" id="resetImg" style="width: 15px; height: 15px;"></button>
+    <div id="myScratchyZone" style="width: 270px; height: 116px;">
+    </div>
+    <div id="CTA" onclick="onExit(event)"><img src="mark.png"></div>
+    <script src="scratchy.js"></script>
+    <script>
+
+      var scratchy;
+
+      window.onload = function() {
+        if (!Enabler.isInitialized()) {
+          Enabler.addEventListener(studio.events.StudioEvent.INIT, enablerInitialized);
+        } else {
+          enablerInitialized();
+        }
+      }
+
+      function enablerInitialized() {
+        if (!Enabler.isVisible()) {
+          Enabler.addEventListener(studio.events.StudioEvent.VISIBLE, adVisible);
+        } else {
+          adVisible();
+        }
+      }
+
+      function toggleScratching() {
+        scratchy.toggle();
+      }
+
+      function adVisible() {
+        document.getElementById('CTA').style.visibility = 'visible';
+        document.getElementById('resetBtn').style.visibility = 'visible';
+        scratchy = new Scratchy();
+        scratchy.init('myScratchyZone', Enabler.getUrl('./img.png'), Enabler.getUrl('./germs.jpg'));
+      }
+
+      function onExit(e) {
+        Enabler.exit("Default");
+      }
+
+      function trace(msg) {
+        //document.getElementById('log').innerHTML += '<pre>' + msg + '</pre>';
+      }
+    </script>
+  </body>
+</html>

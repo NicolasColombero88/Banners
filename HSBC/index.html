@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>300x250</title>
+    <style>
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .size {
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 300px;
+            height: 250px;
+        }
+
+        #container {
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        #bg {
+            background-image: url(bg.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
+
+        #veladura {
+            opacity: 0;
+            background-image: url(veladura.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 25;
+        }
+
+        #logo {
+            opacity: 0;
+            background-image: url(logo_HSBC.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 100;
+        }
+
+        .sprite {
+            background-repeat: no-repeat;
+            display: none;
+            width: 233px;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            position: absolute;
+            z-index: 50;
+        }
+
+        #visa1 {
+            top: -124px;
+            left: -29px;
+            transform: rotate(-28deg);
+        }
+
+        #visa2 {
+            top: 50px;
+            left: 300px;
+            transform: rotate(12deg);
+        }
+
+        #visa3 {
+            top: -10px;
+            left: -12px;
+            transform: rotate(12deg);
+        }
+
+        #master1 {
+            top: -105px;
+            left: -100px;
+            transform: rotate(-28deg);
+        }
+
+        #master2 {
+            top: 50px;
+            left: -300px;
+            transform: rotate(12deg);
+        }
+
+        #master3 {
+            top: 140px;
+            left: 67px;
+            transform: rotate(3deg);
+        }
+
+        .visa {
+            height: 131px;
+            background-image: url(sprite-visa-233x131-15f-233x1966.png);
+            animation-name: spriteVisa;
+            animation-timing-function: steps(14);
+        }
+
+        .master {
+            height: 92px;
+            background-image: url(sprite-master-233x92-16f-233x1496.png);
+            animation-name: spriteMaster;
+            animation-timing-function: steps(15);
+        }
+
+        .text {
+            color: #fff;
+            opacity: 0;
+            font-family: 'UniversNext';
+        }
+
+        .copy {
+            opacity: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 150;
+        }
+
+        #copy1 {
+            background-image: url(copy1.png);
+        }
+
+        #copy2 {
+            background-image: url(copy2.png);
+        }
+
+        #copy3 {
+            background-image: url(copy3.png);
+        }
+
+        #copy4 {
+            background-image: url(copy4.png);
+        }
+
+        #legal {
+            opacity: 0;
+            background-image: url(legal.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 150;
+        }
+
+        #iso {
+            opacity: 0;
+            background-image: url(iso.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 150;
+        }
+
+        .btn {
+            position: absolute;
+            z-index: 500;
+            background-color: white;
+            color: black;
+            border: none;
+            box-shadow: none;
+            width: 85px;
+            height: 16px;
+            top: 223px;
+            left: 11px;
+            font-size: 10px;
+            opacity: 0;
+            display: none;
+            text-align: center;
+        }
+
+        #tapArea {
+            z-index: 400;
+        }
+
+        #legal {
+            z-index: 450;
+        }
+
+
+
+
+        @keyframes spriteVisa {
+            0% {
+                background-position: 0px 0px;
+            }
+
+            100% {
+                background-position: 0px -1835px;
+            }
+        }
+
+        @keyframes spriteMaster {
+            0% {
+                background-position: 0px 0px;
+            }
+
+            100% {
+                background-position: 0px -1404px;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        var clickTag = "http://www.google.com";
+    </script>
+</head>
+
+<body>
+    <div id="container" class="size">
+        <a href="javascript:window.open(window.clickTag); void(0)">
+            <div id="copy1" class="copy size"></div>
+            <div id="copy2" class="copy size"></div>
+            <div id="copy3" class="copy size"></div>
+            <div id="copy4" class="copy size"></div>
+            <div id="legal" class="size"></div>
+            <div id="logo" class="size"></div>
+            <div id="visa1" class="sprite visa"></div>
+            <div id="visa2" class="sprite visa"></div>
+            <div id="visa3" class="sprite visa"></div>
+            <div id="master1" class="sprite master"></div>
+            <div id="master2" class="sprite master"></div>
+            <div id="master3" class="sprite master"></div>
+            <div id="iso" class="size"></div>
+            <div id="veladura" class="size"></div>
+            <div id="bg" class="size"></div>
+
+
+        </a>
+        <button id="legalShow" class="btn" onclick="showLegal()">Ver Legales</button>
+        <button id="legalHide" class="btn" onclick="hideLegal()">Ocultar Legales</button>
+
+        <div
+            style="position: absolute; left: 0px; top: 0px; width: 100%; height: 1px; z-index: 9000; background-color: rgb(0, 0, 0);">
+        </div>
+        <div
+            style="position: absolute; right: 0px; top: 0px; width: 1px; height: 100%; z-index: 9000; background-color: rgb(0, 0, 0);">
+        </div>
+        <div
+            style="position: absolute; left: 0px; bottom: 0px; width: 100%; height: 1px; z-index: 9000; background-color: rgb(0, 0, 0);">
+        </div>
+        <div
+            style="position: absolute; left: 0px; top: 0px; width: 1px; height: 100%; z-index: 9000; background-color: rgb(0, 0, 0);">
+        </div>
+    </div>
+
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.18.0_499ba64a23378545748ff12d372e59e9_min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="function.js"></script>
+
+</body>
+
+</html>

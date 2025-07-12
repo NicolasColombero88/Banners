@@ -1,0 +1,484 @@
+/*  GENERAL */ 
+
+@font-face {
+  font-family: 'OpenSansBold';
+    src: url(../fonts/OpenSansBold.woff)
+}
+
+
+
+body, html {
+	margin: 0;
+	padding: 0;
+	font-family: "advocateSansRegular", sans-serif;
+	vertical-align: baseline;
+	border: 0;
+}
+body {
+    width: 300px;
+    height: 250px;
+}
+#stage {
+	width: 298px;
+	height: 248px;
+	background: url(../assets/bg2.jpg) no-repeat;
+    background-position: center center;
+	position: absolute;
+	border: 1px solid #000;
+	overflow: hidden;
+    opacity: 0;
+}
+
+strong { 
+    font-weight: bold;
+}
+
+#sponsor_click{
+    width: 65px;
+    height: 15px;
+    position: absolute;
+    top: -20px;
+    left: 211px;
+    z-index: 999;
+}
+
+#footer a{
+    color: #000;
+    text-decoration: underline;
+}
+
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 250px;
+    
+}
+
+#canvas-click {
+    width: 300px;
+    height: 167px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+.op {
+    opacity: 0;
+}
+
+.first {
+    position:absolute;
+    z-index:300;
+}
+
+.second {
+    position:absolute;
+    z-index: 200;    
+}
+
+.third {
+    position:absolute;
+    z-index: 100;
+}
+
+#green-arrow{
+    width: 6px;
+    height: 6px;
+}
+
+
+.retina-fit {
+    width: 300px;
+    height: 250px;
+}
+
+.nowrap{
+    display: inline-block;
+    white-space: nowrap;
+    
+}
+
+.magenta{
+    color: #ff00ff;
+}
+
+
+/*FRAME 1*/
+
+#q-icon{
+    top: 0;
+    left: -300px;
+    opacity: 1;
+}
+
+#copycontainer1 {
+    
+        opacity: 1;
+        font-family: 'Open Sans', sans-serif;
+        color: #fff;
+        width: 300px;
+        height: 250px;
+        position: absolute;
+    }
+
+#copy11{
+    position: absolute;
+    top: 62px;
+    left: 12px;
+    font-size: 15px;
+}
+
+#copy12{
+    position: absolute;
+    top: 100px;
+    left: 11px;
+    font-size: 14px;
+}
+
+#copy13{
+    position: absolute;
+    top: 119px;
+    left: 11px;
+    font-size: 8px;
+    font-weight: 100;
+    letter-spacing: 0em;
+    line-height: 10px;
+}
+
+.magenta{
+    color:#ff00ff;
+}
+
+.blanco{
+    color: #fff;
+}
+
+#copycount{
+    color: #fff;
+    left:93px;
+    top: 36px;
+    font-size: 38pt;
+    font-family: 'OpenSansBold';
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+}
+
+
+	
+/*FRAME 2*/	
+	
+#copycontainer2 {
+    position: absolute;
+        opacity: 0;
+        font-family: 'Open Sans', sans-serif;
+        color: #000;
+        width: 300px;
+        height: 250px;
+        position: absolute;
+    left:0px;
+    }
+
+#copy2 {
+    position: absolute;
+    width: 300px;
+    top: 66px;
+    left: 11px;
+    opacity: 1;
+    font-weight: 400;
+    font-size: 11px;
+}
+
+#sponsor {
+    font-size: 7px;
+    top: 2px;
+    left: 213px;
+    position: absolute;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/*FREME 3*/
+
+
+#copycontainer3{
+    position: absolute;
+        opacity: 1;
+        font-family: 'Open Sans', sans-serif;
+        color: #000;
+        width: 300px;
+        height: 250px;
+        position: absolute;    
+    left: 300px;
+}
+
+
+#copy3 {
+    position: absolute;
+    width: 300px;
+    top: 70px;
+    left: 11px;
+    opacity: 1;
+    font-weight: 400;
+    font-size: 14px;
+    
+}
+
+.colorado{
+    color: #d81a26;
+}
+
+#vial {
+    position: absolute;
+    left: 80px;
+}
+
+
+
+/*FREME 4*/
+
+#copycontainer4{
+    position: absolute;
+        opacity: 1;
+        font-family: 'Open Sans', sans-serif;
+        color: #000;
+        width: 300px;
+        height: 250px;
+        position: absolute;
+        left: 300px;
+}
+
+
+#copy4 {
+    position: absolute;
+    width: 300px;
+    top: 61px;
+    left: 0px;
+    opacity: 1;
+    font-weight: 400;
+    font-size: 13px;
+    text-align: center;
+    line-height: 16px;
+}
+
+
+
+#footnote {
+    font-size: 8px;
+    top: 150px;
+    left: 11px;
+    opacity: 0;
+    position: absolute;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#cta {
+    position: absolute;
+    top: 119px;
+    left: 100px;
+    background: #ce3239 url(../assets/cta.svg) no-repeat;
+    background-size: 92px 22px;
+    /*background-color: #ce3239;*/
+    color: #fff;
+    height: 22px;
+    width: 100px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 8px;
+    font-family: 'OpenSans', sans-serif;
+    -webkit-border-radius: 2px; 
+    -moz-border-radius: 2px; 
+    border-radius: 2px;
+    line-height: 22px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+    
+}
+
+#cta-arrow {
+        width: 6px;
+    height: 10px;
+    top: 5px;
+    position: absolute;
+
+    
+}
+
+
+
+/*DISCLAIMER*/	
+	
+
+#footer {
+    width: 300px;
+    height: 85px;
+    background: #ffffff;
+    padding: 0px 0px;
+    float: left;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 8pt;
+    line-height: 9px;
+    color: rgb(0, 0, 0);
+    line-height: 20px;
+    position: absolute;
+    bottom: 0;
+}
+
+
+
+#button {
+    width: 300px;
+    bottom: 0;
+    position: absolute;
+    height: 15px;
+    
+}
+
+#button-l {
+    float: left;
+    width: 150px;
+    height: 15px;
+}
+
+#button-r{
+    float: right;
+    width: 150px;
+    height: 15px;
+}
+
+#arrow img {
+    width: 100%;
+    height: auto;
+    padding: 0px 0px;
+    position: absolute;
+    top:0%;
+
+}
+#arrowClicktag{
+   z-index: 1000;
+    width: 19px;
+    height: 15px;
+    left: 281px;
+    position: absolute;
+}
+
+
+
+#footer .viewport {
+	width: 280px;
+	height: 69px;
+	overflow: hidden;
+	position: absolute;
+    left: 10px;
+}
+#footer .overview {
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 0;
+	margin: 0;
+	padding-bottom: 5px;
+    padding-top: 5px;
+	padding-left: 0px;
+	line-height: 130%;
+}
+
+
+#footer p {
+    font-size:9px; 
+    line-height:14px; 
+    text-decoration: none;
+    
+}
+
+
+#footer .scrollbar {
+	background: transparent url(../assets/bar.png) no-repeat 0 0;
+    background-size: 3px 60px;
+    position: relative;
+    background-position: 0 0;
+    float: right;
+    width: 3px;
+    top: 8px;
+    height: 60px !important;
+    right: 5px;
+}
+#footer .track {
+	height: 30px !important;
+	width: 6px;
+	position: relative;
+	padding: 0 1px;
+}
+#footer .thumb {
+	background: transparent url(../assets/scroll.png) no-repeat 50% 100%;
+    background-size: 3px 10px;
+	height: 10px !important;
+	width: 3px;
+	cursor: pointer;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+    left: 0px;
+}
+#footer .thumb .end {
+	overflow: hidden;
+	height: 5px;
+	width: 25px;
+}
+#footer .disable {
+	display: none;
+}
+.noSelect {
+	user-select: none;
+	-o-user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+}
+
+
+
+.clickTags {
+    cursor:pointer !important;
+    cursor: hand !important;
+    
+}
+
+/*IE*/
+
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+        
+   #footer a {  
+    color: #000;
+    text-decoration: underline !important;
+    cursor: auto;
+}
+        
+    #footer a:any-link {  
+        color: #000;
+        text-decoration: underline !important;
+        cursor: auto;
+}
+}
+
+
+/*MOZ*/
+
+@-moz-document url-prefix() {
+ #footer {
+padding: 0px 0px 0px 0px;
+}
+ #footer .scrollbar {
+     top: 8px !important;
+     right: 5px;
+}
+
+strong { font-weight: bold; }
+      
+}
+
+
+
